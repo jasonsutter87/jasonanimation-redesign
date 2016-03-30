@@ -7,23 +7,53 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<!-- Navigation -->
-	<nav>
-		<ul class="navigation">
-		  <li><a href="/blogs">JASONcoder</a></li>
-		  <li style="float:right"><a href="/pages/about">About</a></li>
-		  <li style="float:right"><a href="/project_eulers">Project Euler</a></li>
-		  <li style="float:right"><a href="/pages/portfolio">Portfolio</a></li>
-		  <li style="float:right"><a href="/pages/contact">Contact</a></li>
-		  <li style="float:right"><a href="#">Account</a></li>
-		  <li style="float:right"><a href="#">Sign In</a></li>
-		  
-		  <li class="icon">
-		    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-		  </li>
-		</ul>
-	</nav>
+	
+	<% if user_signed_in? %>
+		<!-- Navigation -->
+		<nav>
+			<ul class="navigation">
+				<li id="nav-title"><a href="/blogs">JASONcoder</a></li>
+				<li style="float:right"><a href="#">Sign Out</a></li>
+				<li style="float:right"><a href="#">Account</a></li>
+				<li style="float:right"><a href="/pages/contact">Contact</a></li>
+				<li style="float:right"><a href="/pages/portfolio">Portfolio</a></li>
+				<li style="float:right"><a href="/project_eulers">Project Euler</a></li>
+				<li style="float:right"><a href="/pages/about">About</a></li>
+				<li class="icon">
+					<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+				</li>
+			</ul>
+		</nav>
 	<!-- End Navigation /-->
+	
+	<% else %>
+	<!-- Navigation -->
+		<nav>
+			<ul class="navigation">
+				<li id="nav-title"><a href="/blogs">JASONcoder</a></li>
+				<li style="float:right"><a href="#">Sign In</a></li>
+				<li style="float:right"><a href="#">Account</a></li>
+				<li style="float:right"><a href="/pages/contact">Contact</a></li>
+				<li style="float:right"><a href="/pages/portfolio">Portfolio</a></li>
+				<li style="float:right"><a href="/project_eulers">Project Euler</a></li>
+				<li style="float:right"><a href="/pages/about">About</a></li>
+				<li class="icon">
+					<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+				</li>
+			</ul>
+		</nav>
+	<!-- End Navigation /-->
+	
+	
+	<% end %>
+
+
+
+
+	
+
+	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
 <%= yield %>
 
