@@ -1,0 +1,29 @@
+<%= form_for(@project_euler) do |f| %>
+  <% if @project_euler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project_euler.errors.count, "error") %> prohibited this project_euler from being saved:</h2>
+
+      <ul>
+      <% @project_euler.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :post %><br>
+    <%= f.text_area :post %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

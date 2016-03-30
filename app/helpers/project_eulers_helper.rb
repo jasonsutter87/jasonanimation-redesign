@@ -1,0 +1,2 @@
+module ProjectEulersHelper
+end
