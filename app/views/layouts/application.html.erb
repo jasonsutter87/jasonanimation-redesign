@@ -7,6 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<!-- Navigation -->
+	<nav>
+		<ul class="navigation">
+		  <li><a href="/blogs">JASONcoder</a></li>
+		  <li style="float:right"><a href="/pages/about">About</a></li>
+		  <li style="float:right"><a href="/project_eulers">Project Euler</a></li>
+		  <li style="float:right"><a href="/pages/portfolio">Portfolio</a></li>
+		  <li style="float:right"><a href="/pages/contact">Contact</a></li>
+		  <li style="float:right"><a href="#">Account</a></li>
+		  <li style="float:right"><a href="#">Sign In</a></li>
+		  
+		  <li class="icon">
+		    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+		  </li>
+		</ul>
+	</nav>
+	<!-- End Navigation /-->
 
 <%= yield %>
 
