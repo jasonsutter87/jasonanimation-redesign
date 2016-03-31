@@ -21,6 +21,7 @@ body {
 }
 
 
+
 .footer {
   
 	background-color: #2c333b;
@@ -55,6 +56,9 @@ body {
 
 
 }
+.section p{
+  font-size: 12pt;
+  }
 
 .section img {
 
