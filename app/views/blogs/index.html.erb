@@ -1,3 +1,4 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Blogs</h1>
@@ -19,13 +20,34 @@
         <td><%= blog.title %></td>
         <td><%= blog.post %></td>
         <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+          <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<% if user_signed_in? %>
+  <%= link_to 'New Blog', new_blog_path %>
+<% end %>
+</div>
+<br>
 
-<%= link_to 'New Blog', new_blog_path %>
+<div class="footer">
+    <footer>
+      <h4 class="wrapper">JASONSUTTER</h4>
+      <div>
+    
+        <img src="../images/test.JPG" alt="Footer-Portrait">
+        <p class="wrapper">Jason is an aspiring programmer based out of San Francisco, CA. He is currently attending Devboot Camp we he is focused on development</p>
+        <p class="wrapper"><a href="https://github.com/jasonsutter87"><i class="fa fa-github-square fa-2x"></i></a>     <a href="https://www.linkedin.com/in/jason-sutter-23459b1a"><i class="fa fa-linkedin-square fa-2x"></i></a></p>
+      </div>
+      <p class="Copyright">Copyright Jason Sutter &copy; 2016 - jasonanimation.net</p>
+      <p class="Copyright">CONTENT LICENSED UNDER THE CREATIVE COMMONS <a href="http://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a></p>
+
+      
+    </footer>
+  </div>
