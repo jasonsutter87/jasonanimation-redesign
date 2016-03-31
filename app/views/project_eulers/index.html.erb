@@ -11,8 +11,9 @@
   <p>This is a lovely space for me to keep track my progression through Project Euler</p>
 </div>
   <br>
+
 <% @project_eulers.each do |project_euler| %>
-<div class="link row clearfix">
+
 <div class="section">
 <h2>
   <%= link_to project_euler.title, project_euler %></h2>
@@ -27,7 +28,7 @@
 </div>
 <br>
 
-</div>
+
 <% end %>
 
 <br>
