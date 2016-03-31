@@ -16,7 +16,8 @@
 /* Remove margins and padding from the list, and add a black background color */
 body {
 	margin: 0;
-	font:  "Open Sans", Arial, sans-serif
+	font:  "Open Sans", Arial, sans-serif;
+	background-color: 	#f2f2f2;
 }
 
 
@@ -30,13 +31,41 @@ body {
 	width: 100%;
 	text-align: center;
 	color: white;
-  list-style-type: none;
-  margin: 0;
+  	list-style-type: none;
+  	margin: 0;
     
 
 
 
 }
+
+.header{
+	background-color: #2c333b;
+	color: white;
+	padding: 10px;
+
+}
+
+.section {
+	background-color: white;
+	padding: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	color: #716e6e;
+
+
+}
+
+.section img {
+
+    float: right;
+    margin: 0 0 10px 10px;
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+
+}
+
 .Copyright{
 	font-size: 10px;
 }
@@ -57,7 +86,8 @@ body {
 
 .footer img{
 	width: 140px;
-	height: auto; 
+	height: auto;
+	border-radius: 50%; 
 }
 
 
