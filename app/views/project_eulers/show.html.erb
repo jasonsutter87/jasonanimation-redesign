@@ -1,24 +1,31 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
+<div class="header">
 <p>
   <strong>Date:</strong>
   <%= @project_euler.date %>
 </p>
+</div><br>
 
+
+<div class="header">
 <p>
   <strong>Title:</strong>
   <%= @project_euler.title %>
-</p>
+</p></div><br>
 
+<div class="section">
 <p>
   <strong>Post:</strong>
   <%= @project_euler.post %>
 </p>
+</div><br>
 <!--
 <%= link_to 'Edit', edit_project_euler_path(@project_euler) %> |
 -->
-<%= link_to 'Back', project_eulers_path %>
+<button class="button"><%= link_to 'Back', project_eulers_path %></button>
+
 </div>
 <br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer">
