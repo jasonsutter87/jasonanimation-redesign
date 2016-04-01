@@ -1,24 +1,36 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @blog.date %>
-</p>
 
+  <div class="header">
+    <p>
+      <strong>Date:</strong>
+      <%= @blog.date %>
+    </p>
+    </div>
+
+
+<br>
+  <div class="header">
 <p>
   <strong>Title:</strong>
   <%= @blog.title %>
 </p>
-
+   
+  </div>
+<br>
+<div class="section">
 <p>
   <strong>Post:</strong>
   <%= @blog.post %>
 </p>
+</div>
 
 <!--
 <%= link_to 'Edit', edit_blog_path(@blog) %> | -->
-<%= link_to 'Back', blogs_path %>
+<br>
+<button class="button"><%= link_to 'Back', blogs_path %></button>
+
 
 </div>
 <br><br><br><br><br><br><br><br><br><br><br>
